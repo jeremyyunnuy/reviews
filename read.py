@@ -28,9 +28,12 @@ for word in wc:
 while True:
     word = input('查詢的關鍵字: ')
     if word == 'q':
-        print('查詢結束')
-    print(word, '出現過的次數為: ', wc[word])
-
+    	break
+    if word in wc:
+    	print(word, '出現過的次數為: ', wc[word])
+    else:
+    	print('這個字沒有出現過!')
+ print('查詢結束')
 
 
     sum_len = 0
