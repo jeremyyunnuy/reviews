@@ -28,32 +28,32 @@ for word in wc:
 while True:
     word = input('查詢的關鍵字: ')
     if word == 'q':
-    	break
+        break
     if word in wc:
-    	print(word, '出現過的次數為: ', wc[word])
+        print(word, '出現過的次數為: ', wc[word])
     else:
-    	print('這個字沒有出現過!')
- print('查詢結束')
+        print('這個字沒有出現過!')
+print('查詢結束')
 
 
-    sum_len = 0
-    for d in data:
-        sum_len += len(d)
-    print('留言的平均長度為', sum_len/len(data))
-    # 以下為篩選 小於100
-    new = [] #新增新的清單  
-    for d in data: # 把清單中的東西一個一個拿出來
-        if len(d) < 100:
-            new.append(d) # 加入到新的新單裡面
-    print('一共有', len(new), '筆留言長度小於100')
-    print(new[0])
-    print(new[1])
+sum_len = 0
+for d in data:
+    sum_len += len(d)
+print('留言的平均長度為', sum_len/len(data))
+# 以下為篩選 小於100
+new = [] #新增新的清單  
+for d in data: # 把清單中的東西一個一個拿出來
+    if len(d) < 100:
+        new.append(d) # 加入到新的新單裡面
+print('一共有', len(new), '筆留言長度小於100')
+print(new[0])
+print(new[1])
 
-    good = []
-    for d in data:
-        if 'good' in d:
-            good.append(d)
-    print('一共有', len(good), '筆留言提到good')
+good = []
+for d in data:
+    if 'good' in d:
+        good.append(d)
+print('一共有', len(good), '筆留言提到good')
 
 # 'a' in 'abc' --> True    
 # 'x' in 'abc' --> False 
